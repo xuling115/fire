@@ -16,6 +16,8 @@
                 Fireflies.push(new Fireflie({
                     cas: this.cas,
                     r: r,
+                    drag: this.options.drag,
+                    wander: this.options.wander,
                     x: random(r, this.cas.width - r),
                     y: random(r, this.cas.height - r),
                     vx: random(-5,5),
@@ -59,7 +61,9 @@
     $.fn.fire.defaults = {
         count: 30,
         width: 1000,
-        height: 600
+        height: 600,
+        drag: 0.62,　//速度阻力
+        wander : 0.12 //角度偏离参数
     }
 
 
@@ -88,9 +92,9 @@
         this.vy = cf.vy;
         
         //速度阻力
-        this.drag = 0.62;
+        this.drag = cf.drag //0.62;
         //角度偏离参数
-        this.wander = 0.12;
+        this.wander = cf.wander //0.12;
         //偏离角度
         this.theta = random(PI2);
         this.cas = cf.cas;
@@ -134,7 +138,3 @@
         }
     };
 })(jQuery);
-
-    
-      
-       
