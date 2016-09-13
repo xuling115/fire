@@ -13,15 +13,21 @@
 	<script type="text/javascript">
 		$("#canvas").fire({
 			count: 1,
+			drag: 0.92,　//速度阻力
+        	wander : 0.42, //角度偏离参数
 			width: $("#canvas").width(),
 			height: $("#canvas").height()
 		})
 
 		$("#canvas2").fire({
 			count: 10,
+			drag: 0.94,　//速度阻力
+        	wander : 0.52, //角度偏离参数
 			width: $("#canvas2").width(),
 			height: $("#canvas2").height()
 		})
+		//new fire(30,"canvas",1924,200).start() 
+		
 	</script>	
 </body>
 </html>
